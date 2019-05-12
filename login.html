@@ -1,0 +1,111 @@
+  <!DOCTYPE html>
+  <html lang="es">
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" type="text/css" href="css/index.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="utf-8">
+
+      <title>Decora-Admin</title>
+    </head>
+
+    <body>
+      <!--navbar-->
+      <ul id="dropdown1" class="dropdown-content">
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="pedido.html">Pedidos</a></li>
+          <li class="divider"></li>
+          <li><a href="#!">Salir</a></li>
+      </ul>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo"><img src="assets/images/icono.png"></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">General</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Decoraciones<i class="material-icons right">arrow_drop_down</i></a></li>
+          </ul>
+        </div>
+      </nav>
+      <!--/navbar-->
+      <!--SECCION-->
+      <div id = "index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+          <div class="container">
+            <br><br>
+            <h1 class="header center">Ingresar como Administrador</h1>
+            <div class="row center">
+              <form class="col s12 l12">
+                <div class="row">
+                  <div class="col l3"></div>
+                  <div class="input-field col l6">
+                    <input type="text" id="first_name" class="validate white-text ">
+                    <label for="first_name" class="white-text white">Nombre</label>
+                  </div>
+                  <div class="col l3"></div>
+                </div>
+                <div class="row">
+                  <div class="col l3"></div>
+                  <div class="input-field col l6">
+                    <input id="password" type="password" class="validate white-text">
+                    <label for="password" class="white-text white">Contraseña</label>
+                  </div>
+                  <div class="col l3"></div>
+                </div>
+              </form>
+              <div class="row">
+                <a class="waves-effect light-blue darken-4 btn" href="tabla.html">Ingresar</a>
+              </div>
+              
+            </div>
+            <br><br>
+          </div>
+        </div>
+        <div class="parallax"><img src="assets/images/fondo.jpeg" alt="Unsplashed background img 1"></div>
+      </div>
+      <!--/SECCION-->
+      <!--footer-->
+
+      <footer id="footer" class="page-footer">
+        <div class="container">
+          <div class="row center-align">
+
+            <div class="col s12 l3">
+              <a href="#">Preguntas frecuentes</a>
+            </div>
+
+            <div class="col s12 l3">
+              <a href="contacto.html">Contactanos</a>
+            </div>
+
+            <div class="col s12 l3">
+              <a href="#">Terminos y condiciones</a>
+            </div>
+
+            <div class="col s12 l3">
+              <a href="#">Privacidad</a>
+            </div>
+
+          </div>
+
+          <div class="footer-copyright">
+            <div class="container left">2019 Copyright Text
+              
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!--/footer-->
+      <!--JavaScript at end of body for optimized loading-->
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="js/init.js"></script>
+      <script src="js/materialize.js"></script>
+    </body>
+  </html>
