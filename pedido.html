@@ -4,7 +4,7 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
       <link rel="stylesheet" type="text/css" href="css/index.css">
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -23,8 +23,8 @@
       </ul>
       <nav>
         <div class="nav-wrapper">
-          <a href="#!" class="brand-logo"><img src="assets/images/icono.png"></a>
-          <ul class="right hide-on-med-and-down">
+          <a href="#!" class="brand-logo left"><img src="assets/images/icono.png"></a>
+          <ul class="right ">
             <li><a href="index.html">General</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         <!-- Dropdown Trigger -->
@@ -42,34 +42,39 @@
               <h2>Realiza tu pedido</h2>
             </div>
           </div>
-          <form class="col s12">
+          <form class="col s12 formValidate" id="formValidate" method="get" action="#">
             <div class="row">
               <div class="input-field col s6">
-                <input type="text" id="first_name" class="validate">
+                <input type="text" id="first_name" name="first_name" data-error=".errorTxt1">
                 <label for="first_name">Nombre</label>
+                <div class="errorTxt1"></div>
               </div>
               <div class="input-field col s6">
-                <input type="text" id="last_name" class="validate">
+                <input type="text" id="last_name" name="last_name" class="validate" data-error=".errorTxt3">
                 <label for="last_name">Apellidos</label>
+                <div class="errorTxt3"></div>
               </div>
             </div>
 
             <div class="row">
               <div class="input-field col s12">
                 <i class="material-icons prefix blue-text text-darken-4">mode_edit</i>
-                <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                <textarea id="icon_prefix2" name="icon_prefix2" class="materialize-textarea" data-error=".errorTxt5"></textarea>
                 <label for="icon_prefix2">Coloca la descripcion de tu pedido</label>
+                 <div class="errorTxt5"></div>
               </div>
             </div>
 
             <div class="row">
               <div class="input-field col s6">
-                <input type="text" class="datepicker" id="fecha">
+                <input type="text" class="datepicker" id="fecha" name="fecha" data-error=".errorTxt6">
                 <label for="Fecha">Selecciona la fecha de entrega</label>
+                <div class="errorTxt6"></div>
               </div>
               <div class="input-field col s6"> 
-                <input type="text" class="timepicker" id="hora">
+                <input type="text" class="timepicker" id="hora" name="hora" data-error=".errorTxt7">
                 <label for="hora">Selecciona la hora de entrega</label>
+                <div class="errorTxt7"></div>
               </div>
             </div>
 
@@ -121,6 +126,7 @@
       <!--JavaScript at end of body for optimized loading-->
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="js/jquery.validate.js"></script>
       <script src="js/init.js"></script>
       <script src="js/materialize.js"></script>
     </body>

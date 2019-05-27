@@ -4,7 +4,7 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
       <link rel="stylesheet" type="text/css" href="css/index.css">
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -23,8 +23,8 @@
       </ul>
       <nav>
         <div class="nav-wrapper">
-          <a href="#!" class="brand-logo"><img src="assets/images/icono.png"></a>
-          <ul class="right hide-on-med-and-down">
+          <a href="#!" class="brand-logo left"><img src="assets/images/icono.png"></a>
+          <ul class="right ">
             <li><a href="index.html">General</a></li>
             <li><a href="#">Contacto</a></li>
         <!-- Dropdown Trigger -->
@@ -45,42 +45,49 @@
               <h2>Envianos tus preguntas</h2>
             </div>
           </div>
-          <form class="col s12">
+          <form class="col s12 formValidate" id="formValidate" method="get" action="#">
             <div class="row">
             <div class="input-field col s6">
-              <input type="text" id="first_name" class="validate">
+              <input type="text" id="first_name" name="first_name" data-error=".errorTxt1">
               <label for="first_name">Nombre</label>
+              <div class="errorTxt1"></div>
             </div>
             <div class="input-field col s6">
-              <input type="text" id="last_name" class="validate">
+              <input type="text" id="last_name" name="last_name" data-error=".errorTxt3">
               <label for="last_name">Apellidos</label>
+              <div class="errorTxt3"></div>
             </div>
           </div>
 
           <div class="row">
             <div class="input-field col s12 m6">
-              <input type="tel" id="telefono" class="validate">
+              <input type="tel" id="telefono" name="telefono" data-error=".errorTxt4">
               <label for="telefono">Telefono</label>
+              <div class="errorTxt4"></div>
             </div>
+
             <div class="input-field col s12 m6">
-              <input type="email" id="email" class="validate">
+              <input type="email" id="email" name="email" data-error=".errorTxt2">
               <label for="email">Email</label>
+              <div class="errorTxt2"></div>
             </div>
           </div>
 
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix blue-text text-darken-4">mode_edit</i>
-              <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+              <textarea id="icon_prefix2" name="icon_prefix2" class="materialize-textarea" data-error=".errorTxt5"></textarea>
               <label for="icon_prefix2">Que deseas saber?</label>
+              <div class="errorTxt5"></div>
             </div>
           </div>
           <div class="row">
-            <div class="col l4"></div>
-            <button class="btn waves-effect waves-light col l4 light-blue darken-4" type="submit" name="action">Enviar
-              <i class="material-icons right white-text">send</i>
-            </button>
-            <div class="col l4"></div>
+            
+            <div class="input-field center-align">
+              <button class="btn waves-effect waves-light light-blue darken-4 submit" type="active" name="action" >Enviar<i class="material-icons right white-text">send</i>
+              </button>
+            </div>
+            
           </div>
           </form>
         </div>
@@ -125,9 +132,10 @@
       <!--JavaScript at end of body for optimized loading-->
       <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="js/jquery.validate.js"></script>
       <script src="js/init.js"></script>
       <script src="js/materialize.js"></script>
-
+      
     </body>
   </html>
         
