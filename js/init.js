@@ -92,11 +92,5 @@
 	});
 })(jQuery);
 
-function valida_envia()
-		{
-			//el formulario se envia usando el método submit() activándolo desde aquí 
-			alert("Muchas gracias por enviar el formulario"); 
-		} 
-
 
 

@@ -14,23 +14,28 @@
 
     <body>
       <!--navbar-->
-      <ul id="dropdown1" class="dropdown-content">
-          <li><a href="catalogo.html">Catalogo</a></li>
-          <li><a href="pedido.html">Pedidos</a></li>
-          <li class="divider"></li>
-          <li><a href="login.html">Administrador</a></li>
-          <li><a href="#!">Salir</a></li>
-      </ul>
       <nav>
         <div class="nav-wrapper">
           <a href="#!" class="brand-logo left"><img src="assets/images/icono.png"></a>
-          <ul class="right ">
+          <ul class="right hide-on-med-and-down">
             <li><a href="index.html">General</a></li>
+            <li><a href="catalogo.html">Catalogo</a></li>
+            <li><a href="pedido.html">Pedidos</a></li>
             <li><a href="contacto.html">Contacto</a></li>
-        <!-- Dropdown Trigger -->
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Decoraciones<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a href="login.html">Administrador</a></li>
           </ul>
-        </div>
+        
+
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="index.html">General</a></li>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="pedido.html">Pedidos</a></li>
+          <li><a href="contacto.html">contacto</a></li>
+          <li class="divider"></li>
+          <li><a href="login.html">Administrador</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger right"><i class="material-icons white-text">menu</i></a>
+      </div>
       </nav>
       <!--/navbar-->
 
@@ -90,37 +95,68 @@
       </section>
       <!--/form-->
 
-      <!--footer-->
+      <div id = "info"></div>
 
+      <!--footer-->
       <footer id="footer" class="page-footer">
         <div class="container">
           <div class="row center-align">
 
-            <div class="col s12 l3">
-              <a href="#">Preguntas frecuentes</a>
+            <div class="col s12 l4">
+              <a href="#footer" onclick="ajax2()">Preguntas frecuentes</a>
             </div>
 
-            <div class="col s12 l3">
-              <a href="contacto.html">Contactanos</a>
+            <div class="col s12 l4">
+              <a href="#footer" onclick="ajax()">Visitanos</a>
             </div>
 
-            <div class="col s12 l3">
-              <a href="#">Terminos y condiciones</a>
+            <div class="col s12 l4">
+              <a href="#footer" onclick="ajax3()">Otros medios de contacto</a>
             </div>
-
-            <div class="col s12 l3">
-              <a href="#">Privacidad</a>
-            </div>
-
           </div>
-
           <div class="footer-copyright">
-            <div class="container left">2019 Copyright Text
-              
+            <div class="container left">2019 Decora, todos los derechos reservados. 
             </div>
           </div>
         </div>
       </footer>
+      <script >
+        function ajax(){
+            var ajaxRes = new XMLHttpRequest()
+            ajaxRes.onreadystatechange = function(){
+                if (ajaxRes.readyState == 4 && ajaxRes.status == 200) {
+                    document.getElementById("info").innerHTML=ajaxRes.responseText
+                }
+            }
+            ajaxRes.open("GET","mapa.html",true)
+            //ajaxRes.open("GET","texto.txt",true)
+            ajaxRes.send()
+        }
+
+        function ajax2(){
+            var ajaxRes = new XMLHttpRequest()
+            ajaxRes.onreadystatechange = function(){
+                if (ajaxRes.readyState == 4 && ajaxRes.status == 200) {
+                    document.getElementById("info").innerHTML=ajaxRes.responseText
+                }
+            }
+            ajaxRes.open("GET","preguntas.html",true)
+            //ajaxRes.open("GET","texto.txt",true)
+            ajaxRes.send()
+        }
+
+        function ajax3(){
+            var ajaxRes = new XMLHttpRequest()
+            ajaxRes.onreadystatechange = function(){
+                if (ajaxRes.readyState == 4 && ajaxRes.status == 200) {
+                    document.getElementById("info").innerHTML=ajaxRes.responseText
+                }
+            }
+            ajaxRes.open("GET","medios.html",true)
+            //ajaxRes.open("GET","texto.txt",true)
+            ajaxRes.send()
+        }
+      </script>
 
       <!--/footer-->
       <!--JavaScript at end of body for optimized loading-->

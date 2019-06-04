@@ -45,28 +45,45 @@ footer a{
 	color: #e0e0e0;
 }
 .page-footer{
-	background-color: #1a237e;
+	background-color: #283593;
 }
 
 nav{
-	background-color: #1a237e ;
+	background-color: #283593   ;
 }
 
 h1 {
-	color: #e65100;
+	color: #283593 ;
 	font-family: "lucinda caligraphy";
 	font-style: italic;
 }
 
+h3 {
+  color: #283593 ;
+  font-family: "lucinda caligraphy";
+  font-style: italic;
+}
+
 h5 {
+  color: #283593 ;
 	font-style: bold;
+  font-family: "lucinda caligraphy";
 }
 
 button {
 	background-color: #ffff00;
 }
 
-
+table{
+  color: #283593;
+}
+.bn {
+    -webkit-filter: grayscale(70%);
+    -moz-filter: grayscale(70%);
+    -ms-filter: grayscale(70%);
+    -o-filter: grayscale(70%);
+    filter: grayscale(70%);  
+}
 .input-field div.error{
         position: relative;
         top: 0rem;
